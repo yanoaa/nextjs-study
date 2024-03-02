@@ -16,12 +16,14 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
+export type AllPostsData = {
+  id: string;
+  title: string;
+  date: string;
+}[];
+
 type Props = {
-  allPostsData: {
-    id: string;
-    title: string;
-    date: string;
-  }[];
+  allPostsData: AllPostsData;
 };
 
 export default function Home({ allPostsData }) {
